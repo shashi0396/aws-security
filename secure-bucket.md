@@ -6,7 +6,7 @@ The goal is to simulate a real-world security incident, fix it using best practi
 ### Scenario
 An S3 bucket is accidentally made public, allowing unauthorized users to read sensitive data.
 
-![removed block public access](image-1.png)
+![removed block public access](docs/images/image-1.png)
 
 ### Insecure Bucket Policy
 ```
@@ -98,13 +98,13 @@ Note: Deny always overrides Allow
 
 Enable the config by choosing the default values
 
-![config-rules](image-2.png)
+![config-rules](docs/images/image-2.png)
 
 Add rule , click on choose AWS managed rule, add the following rules with default values individually one by one & save
 
 **s3-bucket-public-read-prohibited**
 
-![rule-1](image-3.png)
+![rule-1](docs/images/image-3.png)
 
 **s3-bucket-public-write-prohibited**
 
@@ -137,11 +137,11 @@ Stored in a separate logging bucket
 
 ### Enable Versioning for Disaster Recovery
 
-![versioning](image-6.png)
+![versioning](docs/images/image-6.png)
 
 ### Enable the object lock for compliance buckets
 
-![objectlock](image-7.png)
+![objectlock](docs/images/image-7.png)
 
 
 ## Key Security Takeaways
