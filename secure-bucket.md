@@ -133,7 +133,7 @@ Requester
 Object accessed
 ```
 Stored in a separate logging bucket
-![server access logging](image-5.png)
+![server access logging](docs/images/image-5.png)
 
 ### Enable Versioning for Disaster Recovery
 

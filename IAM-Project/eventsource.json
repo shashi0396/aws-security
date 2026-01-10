@@ -1,0 +1,35 @@
+
+// Custom pattern for evnet bridge rule - IAM security
+
+{
+  "source": ["aws.iam"],
+  "detail-type": ["AWS API Call via CloudTrail"],
+  "detail": {
+    "eventSource": ["iam.amazonaws.com"],
+    "eventName": [
+      "CreateAccessKey",
+      "AttachUserPolicy",
+      "PutUserPolicy",
+      "DeactivateMFADevice",
+      "DeleteAccessKey",
+      "UpdateAccessKey"
+    ]
+  }
+}
+
+// sample json for testing the event pattern 
+
+{
+  "version": "0",
+  "id": "abcd-1234",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.iam",
+  "account": "123456789012",
+  "time": "2026-01-07T21:00:00Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "eventName": "CreateAccessKey",
+    "eventSource": "iam.amazonaws.com"
+  }
+}
