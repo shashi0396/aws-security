@@ -1,0 +1,33 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": "logs:CreateLogGroup",
+			"Resource": "arn:aws:logs:us-east-1:058264287709:*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"logs:CreateLogStream",
+				"logs:PutLogEvents"
+			],
+			"Resource": "arn:aws:logs:us-east-1:058264287709:log-group:/aws/lambda/iam-compromise-remediation:*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"iam:ListAccessKeys",
+				"iam:UpdateAccessKey",
+				"iam:UpdateLoginProfile",
+				"iam:ListMFADevices"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": "sns:Publish",
+			"Resource": "arn:aws:sns:us-east-1:058264287709:iam-remediation-alerts"
+		}
+	]
+}
