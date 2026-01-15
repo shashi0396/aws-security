@@ -4,7 +4,7 @@
 		{
 			"Effect": "Allow",
 			"Action": "logs:CreateLogGroup",
-			"Resource": "arn:aws:logs:us-east-1:058264287709:*"
+			"Resource": "arn:aws:logs:us-east-1:xxxxxxxxxxxx:*"
 		},
 		{
 			"Effect": "Allow",
@@ -12,7 +12,7 @@
 				"logs:CreateLogStream",
 				"logs:PutLogEvents"
 			],
-			"Resource": "arn:aws:logs:us-east-1:058264287709:log-group:/aws/lambda/iam-compromise-remediation:*"
+			"Resource": "arn:aws:logs:us-east-1:xxxxxxxxxxxx:log-group:/aws/lambda/iam-remediation-secuirty-demo:*"
 		},
 		{
 			"Effect": "Allow",
@@ -27,7 +27,7 @@
 		{
 			"Effect": "Allow",
 			"Action": "sns:Publish",
-			"Resource": "arn:aws:sns:us-east-1:058264287709:iam-remediation-alerts"
+			"Resource": "arn:aws:sns:us-east-1:xxxxxxxxxxxxxx:iam-remediation-alerts"
 		}
 	]
 }
